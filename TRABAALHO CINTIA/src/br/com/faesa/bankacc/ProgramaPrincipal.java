@@ -1,0 +1,43 @@
+package br.com.faesa.bankacc;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ProgramaPrincipal {
+    public  static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        List<ContaBancaria> contas = new ArrayList<>();
+        int opcao = 0;
+
+        do  {
+            System.out.println("""
+                    ------ MENU O BANCO ------
+                    
+                    1- Cadastrar
+                    2- Mostrar o Saldo
+                    3- Depositar
+                    4- Sacar
+                    5- Sair
+                    """);
+
+            opcao = scanner.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Você escolheu a primeira opção.");
+                case 2:
+                    System.out.println("Você escolheu a segunda opção.");
+                case 3:
+                    System.out.println("Você escolheu a terceira opção.");
+                case 4:
+                    System.out.println("Você escolheu a quarta opção.");
+                case 5:
+                    System.out.println("Saindo do programa...");
+            }
+        } while (opcao != 5);
+
+        scanner.close();
+    }
+}
