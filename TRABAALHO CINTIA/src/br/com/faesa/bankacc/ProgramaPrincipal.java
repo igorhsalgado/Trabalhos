@@ -20,6 +20,7 @@ public class ProgramaPrincipal {
                     3- Depositar
                     4- Sacar
                     5- Sair
+                    Digite a opcao: 
                     """);
 
             opcao = scanner.nextInt();
@@ -27,14 +28,19 @@ public class ProgramaPrincipal {
             switch (opcao) {
                 case 1:
                     System.out.println("Você escolheu a primeira opção.");
+                    break;
                 case 2:
                     System.out.println("Você escolheu a segunda opção.");
+                    break;
                 case 3:
                     System.out.println("Você escolheu a terceira opção.");
+                    break;
                 case 4:
                     System.out.println("Você escolheu a quarta opção.");
+                    break;
                 case 5:
                     System.out.println("Saindo do programa...");
+                    break;
             }
         } while (opcao != 5);
 
