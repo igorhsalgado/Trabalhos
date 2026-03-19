@@ -37,18 +37,17 @@ public class ContaBancaria {
     }
 
     // Metódo para adicioanr valor ao saldo atual da conta bancária
-    private void depositar(double valor) {
-        System.out.println("Digite o valor que você deseja depositar: ");
-        valor = scanner.nextInt();
-
-        this.saldo += valor;
-        System.out.println("Saldo atual: " + this.saldo);
+    public void depositar(double valor) {
+        if (valor > 0) {
+            this.saldo += valor;
+            System.out.println("Depósito efetuado com sucesso\nSaldo atual: " + this.saldo);
+        } else  {
+            System.out.println("Valor do depósito inválido!");
+        }
     }
 
     // Metódo que confere se existe saldo o suficiente para retirar da conta ou não, caso tenha é retirado
-    private boolean sacar(double valor) {
-        System.out.println("Digite o valor que você deseja sacar: ");
-
+    public boolean sacar(double valor) {
         if (saldo >= valor) {
             this.saldo -= valor;
             System.out.println("Saque efetuado com sucesso!\nSaldo atual: " + this.saldo);
