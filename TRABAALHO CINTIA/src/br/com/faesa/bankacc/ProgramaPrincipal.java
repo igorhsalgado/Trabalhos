@@ -1,19 +1,18 @@
 package br.com.faesa.bankacc;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class ProgramaPrincipal {
-    private static Scanner scanner = new Scanner(System.in);
+    public  static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        List<ContaBancaria> contas = new ArrayList<>();
+        ArrayList<ContaBancaria> contas = new ArrayList<>();
         int opcao = 0;
 
         do  {
             System.out.println("""
-                    ------ MENU O BANCO ------
+                    ------ MENU DO BANCO ------
                     
                     1- Cadastrar
                     2- Mostrar o Saldo
@@ -27,10 +26,10 @@ public class ProgramaPrincipal {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Você escolheu a primeira opção.");
+                    cadastrarConta(contas);
                     break;
                 case 2:
-                    System.out.println("Você escolheu a segunda opção.");
+                    System.out.println("Saldo atual da conta: ");
                     break;
                 case 3:
                     System.out.println("Você escolheu a terceira opção.");
@@ -45,5 +44,23 @@ public class ProgramaPrincipal {
         } while (opcao != 5);
 
         scanner.close();
+    }
+
+    public static void cadastrarConta(ArrayList<ContaBancaria> contas) {
+        scanner.nextLine();
+
+        System.out.println("""
+                    ------ MENU DE CADASTRO  ------
+                    
+                    Digite o titular da conta:
+                    """);
+        String titular = scanner.nextLine();
+
+        System.out.println("Digite o número da conta: ");
+        int numero = scanner.nextInt();
+
+        scanner.nextLine();
+
+        contas.add(new ContaBancaria(numero, titular));
     }
 }
