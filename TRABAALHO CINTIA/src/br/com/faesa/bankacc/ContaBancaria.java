@@ -1,7 +1,5 @@
 package br.com.faesa.bankacc;
 
-import static br.com.faesa.bankacc.ProgramaPrincipal.scanner;
-
 public class ContaBancaria {
     private int numero_conta;
     private String titular;
