@@ -34,7 +34,7 @@ public class ContaBancaria {
         return saldo;
     }
 
-    // Metódo para adicioanr valor ao saldo atual da conta bancária
+    // Metódo para adicionar valor ao saldo atual da conta bancária
     public void depositar(double valor) {
         if (valor > 0) {
             this.saldo += valor;
